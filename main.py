@@ -43,8 +43,6 @@ def propagate_node_edges(nodes):
             if node in closest_node.neighbours or len(closest_node.neighbours) == 3:
                 pass
             else:
-                # add the current node to its closest nodes' set of neighbours
-                # remove the node from possible search options and add it to the nodes neighbours
                 node.neighbours.append(closest_node)
                 
     return nodes
@@ -92,7 +90,7 @@ def plot_nodes(nodes):
     # Show the plot
     plt.show()
 
-n = 7
+n = 12
 nodes = generate_nodes(n)
 nodes = propagate_node_edges(nodes)
 plot_nodes(nodes)
